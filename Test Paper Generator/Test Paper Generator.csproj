@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFEEC8F3-BF5B-4E8B-94B0-A3CB4B5D33B1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test_Paper_Creator</RootNamespace>
+    <AssemblyName>Test Paper Creator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Users\Garfunkel Vila\Desktop\SAD\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Test_Paper_Creator.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Oxygen-Icons.org-Oxygen-Actions-document-edit.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>77811B446D24D28EC89AC03CA6BD3013284E0849</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Test Paper Generator_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dataConnection.cs" />
+    <Compile Include="dbDataSet.cs">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditDatabaseForms\frmAddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditDatabaseForms\frmAddQuestion.Designer.cs">
+      <DependentUpon>frmAddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditDatabaseForms\frmAddTestSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditDatabaseForms\frmAddTestSection.Designer.cs">
+      <DependentUpon>frmAddTestSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmEnumeration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmEnumeration.Designer.cs">
+      <DependentUpon>frmEnumeration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmEssay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmEssay.Designer.cs">
+      <DependentUpon>frmEssay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\frmExamNumbering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\frmExamNumbering.Designer.cs">
+      <DependentUpon>frmExamNumbering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\frmExamWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\frmExamWizard.Designer.cs">
+      <DependentUpon>frmExamWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\frmSectionPrecedence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\frmSectionPrecedence.Designer.cs">
+      <DependentUpon>frmSectionPrecedence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmMatchingType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmMatchingType.Designer.cs">
+      <DependentUpon>frmMatchingType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmMultipleChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmMultipleChoice.Designer.cs">
+      <DependentUpon>frmMultipleChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditDatabase.Designer.cs">
+      <DependentUpon>frmEditDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmIdentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmIdentification.Designer.cs">
+      <DependentUpon>frmIdentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManager\frmUserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManager\frmUserManager.Designer.cs">
+      <DependentUpon>frmUserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManager\frmUserProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManager\frmUserProperties.Designer.cs">
+      <DependentUpon>frmUserProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myEnum.cs" />
+    <Compile Include="User Controls\htmlBuilderClass\examItems\examItem.cs" />
+    <Compile Include="User Controls\htmlBuilderClass\examItems\examItems.cs" />
+    <Compile Include="User Controls\htmlBuilderClass\examSection.cs" />
+    <Compile Include="User Controls\htmlBuilderClass\htmlBuilder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\ExamEditorForms\True False\frmGenTrueFalse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\True False\frmGenTrueFalse.Designer.cs">
+      <DependentUpon>frmGenTrueFalse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmTrueFalse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExamEditorForms\Sections\frmTrueFalse.Designer.cs">
+      <DependentUpon>frmTrueFalse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\htmlBuilderClass\htmlInsertorMethods.cs" />
+    <Compile Include="User Controls\Test Button Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\Test Button Control.Designer.cs">
+      <DependentUpon>Test Button Control.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\EditDatabaseForms\frmAddQuestion.resx">
+      <DependentUpon>frmAddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditDatabaseForms\frmAddTestSection.resx">
+      <DependentUpon>frmAddTestSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\Sections\frmEnumeration.resx">
+      <DependentUpon>frmEnumeration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\Sections\frmEssay.resx">
+      <DependentUpon>frmEssay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\frmExamNumbering.resx">
+      <DependentUpon>frmExamNumbering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\frmExamWizard.resx">
+      <DependentUpon>frmExamWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\frmSectionPrecedence.resx">
+      <DependentUpon>frmSectionPrecedence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\Sections\frmMatchingType.resx">
+      <DependentUpon>frmMatchingType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\Sections\frmMultipleChoice.resx">
+      <DependentUpon>frmMultipleChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditDatabase.resx">
+      <DependentUpon>frmEditDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\Sections\frmIdentification.resx">
+      <DependentUpon>frmIdentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManager\frmUserManager.resx">
+      <DependentUpon>frmUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManager\frmUserProperties.resx">
+      <DependentUpon>frmUserProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Exam.rdlc" />
+    <EmbeddedResource Include="Forms\ExamEditorForms\True False\frmGenTrueFalse.resx">
+      <DependentUpon>frmGenTrueFalse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExamEditorForms\Sections\frmTrueFalse.resx">
+      <DependentUpon>frmTrueFalse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\Test Button Control.resx">
+      <DependentUpon>Test Button Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dbDataSet.xsc">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbDataSet.xss">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Test Paper Generator_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Start.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="User Controls\AnswersBuilderClass\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\htmlStyle.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Brookes Logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="db_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>db.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-document-edit.ico" />
+    <None Include="Resources\edit-file-icon.png" />
+    <EmbeddedResource Include="Resources\SAD Intro.wmv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\Remove-icon.png" />
+    <None Include="Resources\new-file-icon.png" />
+    <None Include="Resources\Action-file-print-icon.png" />
+    <None Include="Resources\trash.png" />
+    <None Include="Resources\new doc.png" />
+    <None Include="Resources\Brookes Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
