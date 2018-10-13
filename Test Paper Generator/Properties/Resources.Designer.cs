@@ -19,7 +19,7 @@ namespace Test_Paper_Creator.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -180,8 +180,8 @@ namespace Test_Paper_Creator.Properties {
         ///&lt;/head&gt;
         ///&lt;body&gt;
         ///    &lt;div&gt;&lt;img src=&quot;Brookes Logo.jpg&quot; style=&quot;width:64px;float:left;overflow:visible&quot;&gt;&lt;/div&gt;
-        ///    &lt;div style=&quot;font-family:&apos;Old English Text MT&apos;; font-size:28pt; color:green; text-align:center;&quot;&gt;Brooke&apos;s Point Academy&lt;/div&gt;
-        ///    &lt;p style=&quot;font-family:&apos;Calibri&apos;;font-size:12pt;text-align:center; margin-top:0px;margin-bottom:0.1in;&quot;&gt;Mabuhay Homes 2000 Paliparan II D [rest of string was truncated]&quot;;.
+        ///    &lt;div style=&quot;font-family:&apos;Old English Text MT&apos;; font-size:28pt; color:green; text-align:center;&quot;&gt;School Name&lt;/div&gt;
+        ///    &lt;p style=&quot;font-family:&apos;Calibri&apos;;font-size:12pt;text-align:center; margin-top:0px;margin-bottom:0.1in;&quot;&gt;Mabuhay Homes 2000 Paliparan II Dasmariñas C [rest of string was truncated]&quot;;.
         /// </summary>
         public static string Start {
             get {
